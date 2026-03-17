@@ -2,7 +2,6 @@ import cv2
 
 vid_path = r"D:\akashvProfile-TESTO-recorded-InCDAC-Lab\thermal-data\girish-demo.wmv"
 
-
 cap = cv2.VideoCapture(vid_path)
 
 fps = cap.get(cv2.CAP_PROP_FPS)
