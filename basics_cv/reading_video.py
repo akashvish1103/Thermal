@@ -6,7 +6,6 @@ cap = cv2.VideoCapture(vid_path)
 
 fps = cap.get(cv2.CAP_PROP_FPS)
 print("FPS:", fps)
-delay = round(fps)
 
 while True:
     ret, frame = cap.read()
