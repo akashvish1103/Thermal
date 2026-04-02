@@ -46,7 +46,7 @@ for bbox in bboxes:
 # REFERENCE
 # -----------------------------
 reference = [None] * len(trackers)
-threshold = 3
+threshold = 2
 
 # -----------------------------
 # PLOTTING (2 GRAPHS)

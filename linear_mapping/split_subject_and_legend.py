@@ -1,7 +1,8 @@
 import cv2
 import numpy as np
 
-vid_path = r"D:\Lie Detection Data HTI\Lie_detection_ex2\Thermal_lie_detection_ex2\grey_manual\krishna_grey_manual1.wmv"
+# vid_path = r"D:\Lie Detection Data HTI\Lie_detection_ex2\Thermal_lie_detection_ex2\grey_manual\krishna_grey_manual1.wmv"
+vid_path = r"C:\Users\Akash Vishwakarma\Desktop\Thermal_Analysis\linear_mapping\output.mp4"
 
 cap =  cv2.VideoCapture(vid_path) 
 frame_number = 0
@@ -22,7 +23,7 @@ while True and frame_number == 0:
     print(f"Grey Frame {frame_number}: {grey_frame.shape}")
     print(f"Grey Frame Legend {frame_number}: {grey_frame_legend.shape}")
 
-    cv2.imwrite("linear_mapping/grey_frame_legend_30_45_celcius.png", grey_frame_legend)
+    cv2.imwrite("linear_mapping/grey_frame_legend_30_45_celcius_mp4.png", grey_frame_legend)
 
     frame_number = frame_number + 1
 

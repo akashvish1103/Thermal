@@ -90,7 +90,8 @@
 
 ############################################################################
 
-# This file is for testing multi-object tracking with CSRT tracker. It allows you to select multiple ROIs and tracks them simultaneously.
+# This file is for testing multi-object tracking with CSRT tracker.
+#  It allows you to select multiple ROIs and tracks them simultaneously.
 import cv2
 
 vid_path = r"D:\Lie Detection Data HTI\Lie_detection_ex2\Thermal_lie_detection_ex2\grey_manual\krishna_grey_manual1.wmv"
