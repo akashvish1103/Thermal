@@ -4,7 +4,9 @@ from matplotlib.pyplot import box
 # ---------------------------
 # 1. Read video
 # ---------------------------
-vid_path = r"D:\Lie Detection Data HTI\Lie_detection_ex2\Audio_video_lie_detection_ex2\Krishan_lie_detection_ex2.mp4"
+# vid_path = r"D:\Lie Detection Data HTI\Lie_detection_ex2\Audio_video_lie_detection_ex2\Krishan_lie_detection_ex2.mp4"
+vid_path = r"C:\Users\Akash Vishwakarma\Downloads\krishna_grey_manual1.mp4"
+
 cap = cv2.VideoCapture(vid_path)  # 0 for webcam
 
 # ---------------------------

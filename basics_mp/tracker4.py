@@ -410,6 +410,7 @@ while True:
                         (x, y-10),
                         cv2.FONT_HERSHEY_SIMPLEX,
                         0.6, (0,255,0), 2)
+            
 
     else:
         cv2.putText(frame, "Tracking Lost - Press R",
