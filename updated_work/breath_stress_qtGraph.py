@@ -920,7 +920,7 @@ from pyqtgraph.Qt import QtWidgets, QtCore
 # =========================================================
 # SETTINGS
 # =========================================================
-THRESHOLD_TEMP = 0.05
+THRESHOLD_TEMP = 0.05          # How  much temp must rise above baseline to be called as "stress" or "cognitive load"
 SMOOTH_K = 5
 MAX_POINTS = 200
 
