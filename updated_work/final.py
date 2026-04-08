@@ -305,7 +305,7 @@ def update():
     # ---- BPM calculation ----
     if len(peaks) >= 2:
         total_time = x_data[-1] - x_data[0]
-        bpm = (len(peaks) / total_time) * 60 if total_time > 0 else 0
+        bpm = round((len(peaks) / total_time) * 60 if total_time > 0 else 0)    # added ROUND by akash
     else:
         bpm = 0
 
