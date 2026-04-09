@@ -22,10 +22,10 @@ REFRACTORY_PERIOD    = 2.0    # minimum seconds between two counted breaths
                                # lower → allow faster breathing detection
 
 # --- Stress Detection (Forehead) ---
-STRESS_BASELINE_FRAMES = 20   # how many frames to average for the baseline temperature
+STRESS_BASELINE_FRAMES = 50   # how many frames to average for the baseline temperature
                                # more frames = more stable baseline, but slower to adapt
 
-STRESS_THRESHOLD = 0.05       # 🔥 temperature rise (°C) above baseline = stress/elevated state
+STRESS_THRESHOLD = 0.1     # 🔥 temperature rise (°C) above baseline = stress/elevated state
                                # raise → only flag strong temperature spikes as stress
                                # lower → more sensitive, flags subtle rises
 
@@ -139,7 +139,10 @@ def detect_breath_peaks(x, y_smooth):
 # =========================================================
 # VIDEO — open and select ROIs
 # =========================================================
-cap = cv2.VideoCapture(r"C:\Users\Akash Vishwakarma\Downloads\krishna_grey_manual1.mp4")
+# vid_path = r"D:\Lie Detection Data HTI\Lie_detection_ex2\Thermal_lie_detection_ex2\grey_manual\pratham_grey_manual.wmv"
+# cap = cv2.VideoCapture(r"C:\Users\Akash Vishwakarma\Downloads\krishna_grey_manual1.mp4")
+vid_path = r"D:\Lie Detection Data HTI\Lie_detection_ex2\Thermal_lie_detection_ex2\grey_manual\priyank_grey_manual.wmv"
+cap = cv2.VideoCapture(vid_path)
 fps = cap.get(cv2.CAP_PROP_FPS)
 
 ret, frame = cap.read()
@@ -305,7 +308,7 @@ def update():
     # ---- BPM calculation ----
     if len(peaks) >= 2:
         total_time = x_data[-1] - x_data[0]
-        bpm = (len(peaks) / total_time) * 60 if total_time > 0 else 0
+        bpm = round((len(peaks) / total_time) * 60 if total_time > 0 else 0)   # added ROUND() by Akash
     else:
         bpm = 0
 
